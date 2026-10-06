@@ -97,6 +97,10 @@
 
 ## 工作日誌
 
+### [36] 2026-10-07 00:15 | Dev / Setup | 設定 GitHub 遠端並推送
+- 執行者：Claude (使用者指示)　狀態：Done
+- 使用者提供倉庫 https://github.com/ATplace/AIVS-ES.git。加入 origin，推送 main 並設定上游追蹤。
+
 ### [35] 2026-10-07 00:05 | Dev / Setup | 專案 git init 並建立第一個 commit
 - 執行者：Claude (使用者指示)　狀態：Done
 - 使用者指示先把專案 git init 並 commit。以 main 為預設分支，.gitignore 排除 node_modules、.next、.data (PGlite 資料與截圖暫存)、.env、*.tsbuildinfo；.gitattributes 統一 LF 換行。第一個 commit e77a351 共 154 個檔案，包含第一版完整平台、README、WorkRecord.md 與 docs/screenshots。確認 .env 與 .data 未進版控。
