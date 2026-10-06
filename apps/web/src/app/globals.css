@@ -1,0 +1,114 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: var(--font-noto), var(--font-inter), ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+
+  /* 品牌色：深墨藍 */
+  --color-brand-50: #eef2ff;
+  --color-brand-100: #e0e7ff;
+  --color-brand-200: #c7d2fe;
+  --color-brand-300: #a5b4fc;
+  --color-brand-400: #818cf8;
+  --color-brand-500: #4f46e5;
+  --color-brand-600: #3f37c9;
+  --color-brand-700: #312e81;
+  --color-brand-800: #262463;
+  --color-brand-900: #1b1a45;
+
+  /* 促銷 / 急迫感：暖橘紅 */
+  --color-sale-50: #fff3ee;
+  --color-sale-100: #ffe2d6;
+  --color-sale-200: #ffc2a8;
+  --color-sale-300: #ff9a70;
+  --color-sale-400: #ff7442;
+  --color-sale-500: #e8542f;
+  --color-sale-600: #c9401f;
+  --color-sale-700: #a33318;
+
+  /* 中性色 */
+  --color-ink-50: #f7f7f8;
+  --color-ink-100: #eeeef1;
+  --color-ink-200: #dcdde2;
+  --color-ink-300: #c1c3cb;
+  --color-ink-400: #9a9ca8;
+  --color-ink-500: #6f7280;
+  --color-ink-600: #52545f;
+  --color-ink-700: #3b3d47;
+  --color-ink-800: #26272e;
+  --color-ink-900: #15161b;
+
+  --color-success-500: #16a34a;
+  --color-warning-500: #f59e0b;
+
+  --radius-xl: 1rem;
+  --radius-2xl: 1.25rem;
+  --radius-3xl: 1.75rem;
+
+  --shadow-card: 0 1px 2px rgb(21 22 27 / 0.04), 0 8px 24px -12px rgb(21 22 27 / 0.12);
+  --shadow-float: 0 12px 40px -12px rgb(21 22 27 / 0.25);
+}
+
+:root {
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  @apply bg-white text-ink-900 antialiased;
+  overflow-x: hidden;
+}
+
+* {
+  @apply border-ink-200;
+}
+
+::selection {
+  background: var(--color-brand-100);
+}
+
+.container-x {
+  @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.line-through-soft {
+  text-decoration: line-through;
+  text-decoration-color: var(--color-ink-400);
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -600px 0;
+  }
+  100% {
+    background-position: 600px 0;
+  }
+}
+.skeleton {
+  @apply rounded-xl bg-ink-100;
+  background-image: linear-gradient(90deg, var(--color-ink-100) 0px, #f9f9fb 40%, var(--color-ink-100) 80%);
+  background-size: 600px 100%;
+  animation: shimmer 1.4s infinite linear;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

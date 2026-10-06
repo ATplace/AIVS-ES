@@ -1,0 +1,32 @@
+{
+  "name": "es-commerce",
+  "private": true,
+  "version": "0.1.0",
+  "description": "ES 電商平台 — 前台 (web)、後台 (admin)、API (api)、共用套件 (packages/*)",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev": "turbo run dev",
+    "dev:api": "npm run dev -w @es/api",
+    "dev:web": "npm run dev -w @es/web",
+    "dev:admin": "npm run dev -w @es/admin",
+    "build": "turbo run build",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "db:push": "npm run db:push -w @es/db",
+    "db:seed": "npm run db:seed -w @es/db",
+    "db:reset": "npm run db:reset -w @es/db",
+    "setup": "npm run db:push && npm run db:seed"
+  },
+  "devDependencies": {
+    "playwright": "^1.63.0",
+    "turbo": "^2.11.7",
+    "typescript": "^5.9.3"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "packageManager": "npm@10.9.2"
+}

@@ -1,0 +1,26 @@
+{
+  "name": "@es/api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "start": "tsx src/index.ts",
+    "build": "tsc --noEmit",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@es/db": "*",
+    "@es/shared": "*",
+    "@hono/node-server": "^2.1.3",
+    "@hono/zod-validator": "^0.9.1",
+    "bcryptjs": "^3.0.3",
+    "hono": "^4.13.13",
+    "jose": "^6.2.12",
+    "zod": "^4.6.5"
+  },
+  "devDependencies": {
+    "@types/node": "^22.19.0",
+    "tsx": "^4.23.15"
+  }
+}
